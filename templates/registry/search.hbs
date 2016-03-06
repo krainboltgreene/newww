@@ -34,11 +34,7 @@
               <p class="keywords">
                 <i class="icon-tag"></i>
                 {{#each keywords}}
-                  {{#if @last}}
-                    {{this}}
-                  {{else}}
-                    {{this}},&nbsp;
-                  {{/if}}
+                  <a href="/browse/keyword/{{this}}" title="{{this}}">{{this}}</a>{{#unless @last}},&nbsp;{{/if}}
                 {{/each}}
               </p>
             {{/if}}
